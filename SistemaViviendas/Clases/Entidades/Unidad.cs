@@ -32,7 +32,7 @@ namespace SistemaViviendas.Clases.Entidades
         #region Atributos
         public static DataTable GetAllUnidades()
         {
-            string cmdText = "SELECT * FROM JAIV_UNIDAD ORDER BY CVE_UNIDAD ASC";
+            string cmdText = "SELECT NOM_UNIDAD, UBIC_UNIDAD, NO_DPTOS, TIPO_UNIDAD FROM JAIV_UNIDAD ORDER BY CVE_UNIDAD ASC";
             MySqlConnection conn;
             DataSet dataSet = new DataSet();
 
@@ -63,7 +63,7 @@ namespace SistemaViviendas.Clases.Entidades
         }
         public static Unidad GetUnidad(int clave)
         {
-            string cmdText = "SELECT * FROM JAIV_UNIDAD WHERE CVE_UNIDAD = @CLAVE";
+            string cmdText = "SELECT NOM_UNIDAD, UBIC_UNIDAD, NO_DPTOS, TIPO_UNIDAD FROM JAIV_UNIDAD WHERE CVE_UNIDAD = @CLAVE";
             MySqlConnection conn;
             DataSet dataSet = new DataSet();
             Unidad unidad = new Unidad();
@@ -88,7 +88,6 @@ namespace SistemaViviendas.Clases.Entidades
                         if (da.Fill(dataSet) == 0)
                             return null;
 
-                        unidad.Clave = (int)dataSet.Tables[0].Rows[0]["CVE_UNIDAD"];
                         unidad.Nommbre = (string)dataSet.Tables[0].Rows[0]["NOM_UNIDAD"];
                         unidad.Direccion = (string)dataSet.Tables[0].Rows[0]["UBIC_UNIDAD"];
                         unidad.NumeroDeptos = (int)dataSet.Tables[0].Rows[0]["NO_DPTOS"];

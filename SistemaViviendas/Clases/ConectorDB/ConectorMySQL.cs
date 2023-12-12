@@ -7,19 +7,16 @@ namespace SistemaViviendas.Clases.ConectorDB
     internal class ConectorMySQL
     {
         #region Atributos
-
         private static string Host { get; set; } = Settings.Default.host;
         private static string Name_db { get; set; } = Settings.Default.name_db;
         private static string Port { get; set; } = Settings.Default.port;
         private static string User { get; set; } = Settings.Default.user;
         private static string Password { get; set; } = Settings.Default.password;
 
-        private static readonly string Cad_conexion = "Server=" + Host + ";Username= " + User + ";Database= " + Name_db + " ;Port= " + Port + ";Password= " + Password + ";Pooling=false;";
-
+        private static readonly string Cad_conexion = "Server=" + Host + ";Username= " + User + ";Database= " + Name_db + " ;Port= " + Port + ";Password= " + Password;
         #endregion
 
         #region Metodos
-
         /// <summary>
         /// Incializa la conexion con la base de datos
         /// </summary>
@@ -67,7 +64,6 @@ namespace SistemaViviendas.Clases.ConectorDB
                 throw new Exception(ex.Message);
             }
         }
-
         #endregion
     }
 }
