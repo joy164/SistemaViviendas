@@ -33,18 +33,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
             this.btn_accion = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.cb_tipoUnidad = new System.Windows.Forms.ComboBox();
-            this.NUD_noDeptos = new System.Windows.Forms.NumericUpDown();
-            this.tb_dirUnidad = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.tb_nomUnidad = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NUD_noDeptos)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_buscar
@@ -100,10 +95,6 @@
             this.panel1.Controls.Add(this.btn_accion);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.cb_tipoUnidad);
-            this.panel1.Controls.Add(this.NUD_noDeptos);
-            this.panel1.Controls.Add(this.tb_dirUnidad);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.tb_nomUnidad);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Enabled = false;
@@ -111,6 +102,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(656, 348);
             this.panel1.TabIndex = 50;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.DarkRed;
+            this.label7.Location = new System.Drawing.Point(10, 82);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(156, 13);
+            this.label7.TabIndex = 51;
+            this.label7.Text = "* Estos campos son obligatorios";
             // 
             // btn_accion
             // 
@@ -135,7 +136,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(445, 19);
+            this.label4.Location = new System.Drawing.Point(222, 21);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(106, 16);
             this.label4.TabIndex = 34;
@@ -144,52 +145,10 @@
             // cb_tipoUnidad
             // 
             this.cb_tipoUnidad.FormattingEnabled = true;
-            this.cb_tipoUnidad.Location = new System.Drawing.Point(448, 38);
+            this.cb_tipoUnidad.Location = new System.Drawing.Point(225, 40);
             this.cb_tipoUnidad.Name = "cb_tipoUnidad";
             this.cb_tipoUnidad.Size = new System.Drawing.Size(194, 21);
             this.cb_tipoUnidad.TabIndex = 33;
-            // 
-            // NUD_noDeptos
-            // 
-            this.NUD_noDeptos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NUD_noDeptos.Location = new System.Drawing.Point(228, 38);
-            this.NUD_noDeptos.Maximum = new decimal(new int[] {
-            500,
-            0,
-            0,
-            0});
-            this.NUD_noDeptos.Name = "NUD_noDeptos";
-            this.NUD_noDeptos.Size = new System.Drawing.Size(194, 22);
-            this.NUD_noDeptos.TabIndex = 32;
-            // 
-            // tb_dirUnidad
-            // 
-            this.tb_dirUnidad.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tb_dirUnidad.Location = new System.Drawing.Point(13, 101);
-            this.tb_dirUnidad.Multiline = true;
-            this.tb_dirUnidad.Name = "tb_dirUnidad";
-            this.tb_dirUnidad.Size = new System.Drawing.Size(629, 116);
-            this.tb_dirUnidad.TabIndex = 31;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(10, 82);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(139, 16);
-            this.label3.TabIndex = 30;
-            this.label3.Text = "Ubicacion de unidad *";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(225, 19);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(149, 16);
-            this.label2.TabIndex = 29;
-            this.label2.Text = "No. de departamentos *";
             // 
             // tb_nomUnidad
             // 
@@ -209,16 +168,6 @@
             this.label1.TabIndex = 27;
             this.label1.Text = "Nombre de unidad *";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.DarkRed;
-            this.label7.Location = new System.Drawing.Point(10, 220);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(156, 13);
-            this.label7.TabIndex = 51;
-            this.label7.Text = "* Estos campos son obligatorios";
-            // 
             // UnidadActualizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -235,7 +184,6 @@
             this.Text = "UnidadActualizar";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NUD_noDeptos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -250,10 +198,6 @@
         private System.Windows.Forms.Button btn_accion;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cb_tipoUnidad;
-        private System.Windows.Forms.NumericUpDown NUD_noDeptos;
-        private System.Windows.Forms.TextBox tb_dirUnidad;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_nomUnidad;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label7;

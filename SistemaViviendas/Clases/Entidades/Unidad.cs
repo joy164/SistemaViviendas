@@ -7,15 +7,13 @@ namespace SistemaViviendas.Clases.Entidades
 {
     internal class Unidad
     {
-        #region Atributos
         public int Clave {  get; set; }
         public string Nommbre { get; set; }
         public string Direccion {  get; set; }
         public int NumeroDeptos { get; set; }
         public char Tipo {  get; set; }
-        #endregion
 
-        #region Constructor
+
         public Unidad(int clave, string nommbre, string direccion, int numeroDeptos, char tipo)
         {
             Clave = clave;
@@ -27,14 +25,17 @@ namespace SistemaViviendas.Clases.Entidades
         public Unidad()
         {
         }
-        #endregion
 
-        #region Atributos
-        public static DataTable GetAllUnidades()
+        public static DataTable GetUnidadesCB()
         {
-            string cmdText = "SELECT NOM_UNIDAD, UBIC_UNIDAD, NO_DPTOS, TIPO_UNIDAD FROM JAIV_UNIDAD ORDER BY CVE_UNIDAD ASC";
+            string cmdText = "SELECT CVE_UNIDAD, NOM_UNIDAD FROM JAIV_UNIDAD ORDER BY NOM_UNIDAD ASC";
             MySqlConnection conn;
             DataSet dataSet = new DataSet();
+
+            DataTable dataSetFinal = new DataTable();
+            dataSetFinal.Columns.Add("clave", typeof(int));
+            dataSetFinal.Columns.Add("texto", typeof(string));
+            dataSetFinal.Rows.Add(null, "No seleccionado");
 
             try
             {
@@ -49,6 +50,10 @@ namespace SistemaViviendas.Clases.Entidades
                     {
                         if (da.Fill(dataSet) == 0)
                             return null;
+
+                        foreach (DataRow fila in dataSet.Tables[0].Rows)
+                            dataSetFinal.Rows.Add((int)fila["CVE_UNIDAD"], string.Format("{0}", (string)fila["NOM_UNIDAD"]));
+
                     }
                 }
 
@@ -59,7 +64,7 @@ namespace SistemaViviendas.Clases.Entidades
             }
 
             ConectorMySQL.TermConexion(conn);
-            return dataSet.Tables[0];
+            return dataSetFinal;
         }
         public static Unidad GetUnidad(int clave)
         {
@@ -138,9 +143,9 @@ namespace SistemaViviendas.Clases.Entidades
             ConectorMySQL.TermConexion(conn);
             return resultado;
         }
-        public static bool UpdateUnidadData(int clave,string nombre, string direccion, int numeroDeptos, char tipo)
+        public static bool UpdateUnidadData(int clave,string nombre, char tipo)
         {
-            string cmdText = "UPDATE JAIV_UNIDAD SET UBIC_UNIDAD = @DIR, NOM_UNIDAD = @NOM, NO_DPTOS = @NO_DPTOS, TIPO_UNIDAD = @TIPO WHERE CVE_UNIDAD = @CLAVE";
+            string cmdText = "UPDATE JAIV_UNIDAD SET NOM_UNIDAD = @NOM, TIPO_UNIDAD = @TIPO WHERE CVE_UNIDAD = @CLAVE";
             MySqlConnection conn;
             bool resultado = false;
 
@@ -155,9 +160,7 @@ namespace SistemaViviendas.Clases.Entidades
                     //realizamos la consulta en la base de datos con el parametro de tipo entero
                     using (MySqlCommand cmdDB = new MySqlCommand(cmdText, conn))
                     {
-                        cmdDB.Parameters.AddWithValue("@DIR", direccion);
                         cmdDB.Parameters.AddWithValue("@NOM", nombre);
-                        cmdDB.Parameters.AddWithValue("@NO_DPTOS", numeroDeptos);
                         cmdDB.Parameters.AddWithValue("@TIPO", tipo);
                         cmdDB.Parameters.AddWithValue("@CLAVE", clave);
 
@@ -205,6 +208,5 @@ namespace SistemaViviendas.Clases.Entidades
             return resultado;
         }
 
-        #endregion
     }
 }

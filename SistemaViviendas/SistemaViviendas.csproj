@@ -102,14 +102,80 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ConectorDB\ConectorMySQL.cs" />
+    <Compile Include="Clases\Entidades\Caract_dpto.cs" />
+    <Compile Include="Clases\Entidades\Departamento.cs" />
+    <Compile Include="Clases\Entidades\Dpto_caract_dpto.cs" />
+    <Compile Include="Clases\Entidades\Estacionamiento.cs" />
+    <Compile Include="Clases\Entidades\Inquilino.cs" />
+    <Compile Include="Clases\Entidades\Renta.cs" />
     <Compile Include="Clases\Entidades\Unidad.cs" />
     <Compile Include="Clases\Entidades\Usuario.cs" />
     <Compile Include="Clases\Utils\ValidacionEntradas.cs" />
+    <Compile Include="Forms_BANE\Actualizar\CaractDeptoActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Actualizar\CaractDeptoActualizar.Designer.cs">
+      <DependentUpon>CaractDeptoActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Actualizar\DepartamentoActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Actualizar\DepartamentoActualizar.Designer.cs">
+      <DependentUpon>DepartamentoActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Actualizar\EstacionamientoActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Actualizar\EstacionamientoActualizar.Designer.cs">
+      <DependentUpon>EstacionamientoActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Actualizar\InquilinoActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Actualizar\InquilinoActualizar.Designer.cs">
+      <DependentUpon>InquilinoActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Actualizar\RentaActualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Actualizar\RentaActualizar.Designer.cs">
+      <DependentUpon>RentaActualizar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_BANE\Actualizar\UnidadActualizar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms_BANE\Actualizar\UnidadActualizar.Designer.cs">
       <DependentUpon>UnidadActualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\CaractDeptoBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\CaractDeptoBuscar.Designer.cs">
+      <DependentUpon>CaractDeptoBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\DepartamentoBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\DepartamentoBuscar.Designer.cs">
+      <DependentUpon>DepartamentoBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\EstacionamientoBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\EstacionamientoBuscar.Designer.cs">
+      <DependentUpon>EstacionamientoBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\InquilinoBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\InquilinoBuscar.Designer.cs">
+      <DependentUpon>InquilinoBuscar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\RentaBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Buscar\RentaBuscar.Designer.cs">
+      <DependentUpon>RentaBuscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms_BANE\Buscar\UnidadBuscar.cs">
       <SubType>Form</SubType>
@@ -117,17 +183,89 @@
     <Compile Include="Forms_BANE\Buscar\UnidadBuscar.Designer.cs">
       <DependentUpon>UnidadBuscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms_BANE\Eliminar\CaractDeptoEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Eliminar\CaractDeptoEliminar.Designer.cs">
+      <DependentUpon>CaractDeptoEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Eliminar\DepartamentoEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Eliminar\DepartamentoEliminar.Designer.cs">
+      <DependentUpon>DepartamentoEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Eliminar\EstacionamientoEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Eliminar\EstacionamientoEliminar.Designer.cs">
+      <DependentUpon>EstacionamientoEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Eliminar\InquilinoEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Eliminar\InquilinoEliminar.Designer.cs">
+      <DependentUpon>InquilinoEliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Eliminar\RentaEliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Eliminar\RentaEliminar.Designer.cs">
+      <DependentUpon>RentaEliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_BANE\Eliminar\UnidadEliminar.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms_BANE\Eliminar\UnidadEliminar.Designer.cs">
       <DependentUpon>UnidadEliminar.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms_BANE\Nuevo\CaractDeptoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Nuevo\CaractDeptoNuevo.Designer.cs">
+      <DependentUpon>CaractDeptoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Nuevo\DepartamentoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Nuevo\DepartamentoNuevo.Designer.cs">
+      <DependentUpon>DepartamentoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Nuevo\EstacionamientoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Nuevo\EstacionamientoNuevo.Designer.cs">
+      <DependentUpon>EstacionamientoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Nuevo\InquilinoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Nuevo\InquilinoNuevo.Designer.cs">
+      <DependentUpon>InquilinoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_BANE\Nuevo\RentaNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_BANE\Nuevo\RentaNuevo.Designer.cs">
+      <DependentUpon>RentaNuevo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms_BANE\Nuevo\UnidadNuevo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms_BANE\Nuevo\UnidadNuevo.Designer.cs">
       <DependentUpon>UnidadNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_config\Forms_configPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_config\Forms_configPrincipal.Designer.cs">
+      <DependentUpon>Forms_configPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms_config\Forms_serverConf.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms_config\Forms_serverConf.Designer.cs">
+      <DependentUpon>Forms_serverConf.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms_hijos\Form2_departamento.cs">
       <SubType>Form</SubType>
@@ -180,17 +318,83 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
+    <EmbeddedResource Include="Forms_BANE\Actualizar\CaractDeptoActualizar.resx">
+      <DependentUpon>CaractDeptoActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Actualizar\DepartamentoActualizar.resx">
+      <DependentUpon>DepartamentoActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Actualizar\EstacionamientoActualizar.resx">
+      <DependentUpon>EstacionamientoActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Actualizar\InquilinoActualizar.resx">
+      <DependentUpon>InquilinoActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Actualizar\RentaActualizar.resx">
+      <DependentUpon>RentaActualizar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_BANE\Actualizar\UnidadActualizar.resx">
       <DependentUpon>UnidadActualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Buscar\CaractDeptoBuscar.resx">
+      <DependentUpon>CaractDeptoBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Buscar\DepartamentoBuscar.resx">
+      <DependentUpon>DepartamentoBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Buscar\EstacionamientoBuscar.resx">
+      <DependentUpon>EstacionamientoBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Buscar\InquilinoBuscar.resx">
+      <DependentUpon>InquilinoBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Buscar\RentaBuscar.resx">
+      <DependentUpon>RentaBuscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_BANE\Buscar\UnidadBuscar.resx">
       <DependentUpon>UnidadBuscar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Eliminar\CaractDeptoEliminar.resx">
+      <DependentUpon>CaractDeptoEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Eliminar\DepartamentoEliminar.resx">
+      <DependentUpon>DepartamentoEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Eliminar\EstacionamientoEliminar.resx">
+      <DependentUpon>EstacionamientoEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Eliminar\InquilinoEliminar.resx">
+      <DependentUpon>InquilinoEliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Eliminar\RentaEliminar.resx">
+      <DependentUpon>RentaEliminar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_BANE\Eliminar\UnidadEliminar.resx">
       <DependentUpon>UnidadEliminar.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Nuevo\CaractDeptoNuevo.resx">
+      <DependentUpon>CaractDeptoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Nuevo\DepartamentoNuevo.resx">
+      <DependentUpon>DepartamentoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Nuevo\EstacionamientoNuevo.resx">
+      <DependentUpon>EstacionamientoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Nuevo\InquilinoNuevo.resx">
+      <DependentUpon>InquilinoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_BANE\Nuevo\RentaNuevo.resx">
+      <DependentUpon>RentaNuevo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms_BANE\Nuevo\UnidadNuevo.resx">
       <DependentUpon>UnidadNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_config\Forms_configPrincipal.resx">
+      <DependentUpon>Forms_configPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms_config\Forms_serverConf.resx">
+      <DependentUpon>Forms_serverConf.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms_hijos\Form2_departamento.resx">
       <DependentUpon>Form2_departamento.cs</DependentUpon>
@@ -290,6 +494,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="icono.ico" />
+    <None Include="Resources\base-de-datos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

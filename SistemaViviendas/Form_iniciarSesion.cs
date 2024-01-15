@@ -2,6 +2,7 @@
 using SistemaViviendas.Clases.Utils;
 using System.Windows.Forms;
 using System;
+using SistemaViviendas.Forms_config;
 
 namespace SistemaViviendas
 {
@@ -23,7 +24,7 @@ namespace SistemaViviendas
         private void btn_iniciar_Click(object sender, EventArgs e)
         {
             Usuario usuario;
-            if (!ValidacionEntradas.ValidarEntradasNumero(true, textBox1) && !ValidacionEntradas.ValidarEntradasTexto(textBox2))
+            if (!ValidacionEntradas.ValidarEntradasNumero(true, textBox1) || !ValidacionEntradas.ValidarEntradasTexto(textBox2))
             {
                 MessageBox.Show("Error en los campos marcados, por favor revise que sus datos o seleccion sea correcta", "Error en los campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -60,6 +61,15 @@ namespace SistemaViviendas
 
             ActiveControl = textBox1;
             Show();
+        }
+
+        private void Form_iniciarSesion_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyData == (Keys.Control | Keys.Alt | Keys.C))
+            {
+                Forms_configPrincipal form = new Forms_configPrincipal();
+                form.ShowDialog();
+            }
         }
     }
 }

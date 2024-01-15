@@ -43,7 +43,7 @@ namespace SistemaViviendas.Forms_BANE.Actualizar
         {
             Unidad res;
 
-            ValidacionEntradas.LimpiarCampos(tb_nomUnidad, NUD_noDeptos, cb_tipoUnidad, tb_dirUnidad);
+            ValidacionEntradas.LimpiarCampos(tb_nomUnidad, cb_tipoUnidad);
 
             if (!ValidacionEntradas.ValidarEntradasNumero(true, tb_buscar))
             {
@@ -62,9 +62,7 @@ namespace SistemaViviendas.Forms_BANE.Actualizar
                 {
                     panel1.Enabled = true;
                     tb_nomUnidad.Text = res.Nommbre;
-                    NUD_noDeptos.Value = res.NumeroDeptos;
                     cb_tipoUnidad.SelectedValue = res.Tipo;
-                    tb_dirUnidad.Text = res.Direccion;
                 }
                 else
                     MessageBox.Show("Ocurrio un error inesperado, revise la conexion a internet e intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -81,7 +79,7 @@ namespace SistemaViviendas.Forms_BANE.Actualizar
             {
                 Unidad res;
 
-                ValidacionEntradas.LimpiarCampos(tb_nomUnidad, NUD_noDeptos, cb_tipoUnidad, tb_dirUnidad);
+                ValidacionEntradas.LimpiarCampos(tb_nomUnidad, cb_tipoUnidad);
 
                 if (!ValidacionEntradas.ValidarEntradasNumero(true, tb_buscar))
                 {
@@ -100,9 +98,7 @@ namespace SistemaViviendas.Forms_BANE.Actualizar
                     {
                         panel1.Enabled = true;
                         tb_nomUnidad.Text = res.Nommbre;
-                        NUD_noDeptos.Value = res.NumeroDeptos;
                         cb_tipoUnidad.SelectedValue = res.Tipo;
-                        tb_dirUnidad.Text = res.Direccion;
                     }
                     else
                         MessageBox.Show("Ocurrio un error inesperado, revise la conexion a internet e intente de nuevo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -117,23 +113,21 @@ namespace SistemaViviendas.Forms_BANE.Actualizar
 
         private void btn_accion_Click(object sender, EventArgs e)
         {
-            if (!ValidacionEntradas.ValidarEntradasTexto(tb_nomUnidad, NUD_noDeptos, cb_tipoUnidad, tb_dirUnidad))
+            if (!ValidacionEntradas.ValidarEntradasTexto(tb_nomUnidad, cb_tipoUnidad))
             {
                 MessageBox.Show("Error en los campos marcados, por favor revise que sus datos o seleccion sea correcta", "Error en los campos", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
             string nomUnidad = tb_nomUnidad.Text;
-            int noDeptos = (int)NUD_noDeptos.Value;
             char tipoUnidad = cb_tipoUnidad.SelectedValue.ToString()[0];
-            string dirUnidad = tb_dirUnidad.Text;
 
             try
             {
-                if (Unidad.UpdateUnidadData(noUnidad, nomUnidad, dirUnidad, noDeptos, tipoUnidad))
+                if (Unidad.UpdateUnidadData(noUnidad, nomUnidad, tipoUnidad))
                 {
                     MessageBox.Show("La unidad habitacional se actualizo con exito", "Actualizacion exitosa", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    ValidacionEntradas.LimpiarCampos(tb_nomUnidad, NUD_noDeptos, cb_tipoUnidad, tb_dirUnidad);
+                    ValidacionEntradas.LimpiarCampos(tb_nomUnidad, cb_tipoUnidad);
                     panel1.Enabled = false;
                 }
                 else

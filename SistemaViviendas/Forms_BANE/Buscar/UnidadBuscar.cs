@@ -58,7 +58,6 @@ namespace SistemaViviendas.Forms_BANE.Buscar
 
                 if (res != null)
                 {
-                    panel1.Enabled = true;
                     tb_nomUnidad.Text = res.Nommbre;
                     NUD_noDeptos.Value = res.NumeroDeptos;
                     cb_tipoUnidad.SelectedValue = res.Tipo;

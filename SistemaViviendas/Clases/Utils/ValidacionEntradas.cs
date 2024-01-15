@@ -23,7 +23,7 @@ namespace SistemaViviendas.Clases.Utils
                 if (object.ReferenceEquals(control.GetType(), tb_obj.GetType()))
                 {
                     //caracteres especiales que no queremos en el texto
-                    string diccionario = "@=<>^/[]{};:,?\\|~+-%#!*$`'\"";
+                    string diccionario = "=<>^/[]{};:,?\\|~+-%#!*$`'\"";
                     tb_obj = (TextBox)control;
 
                     //determina si el campo de texto esta vacio
@@ -109,7 +109,7 @@ namespace SistemaViviendas.Clases.Utils
                 if (object.ReferenceEquals(control.GetType(), tb_obj.GetType()))
                 {
                     //caracteres especiales que no queremos en el texto
-                    string diccionario = "@=<>^/[]{};:,?\\|~+-%#!*$`'\"";
+                    string diccionario = "=<>^/[]{};:,?\\|~+-%#!*$`'\"";
                     tb_obj = (TextBox)control;
 
                     //determina si el campo de texto esta vacio

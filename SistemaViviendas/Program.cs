@@ -16,7 +16,7 @@ namespace SistemaViviendas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_iniciarSesion());
+            Application.Run(new Form_menuPrincipal("Yo"));
         }
     }
 }
